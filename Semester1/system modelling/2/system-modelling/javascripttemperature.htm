@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the temperature value of the corresponding sensor in °C.</p>
+
+<button onclick="myFunction()">Sensor1</button>
+<button onclick="myFunction()">Sensor2</button>
+<button onclick="myFunction()">Sensor3</button>
+<button onclick="myFunction()">Sensor4</button>
+<button onclick="myFunction()">Sensor5</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = Math.floor((Math.random() * 50) + 1);
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

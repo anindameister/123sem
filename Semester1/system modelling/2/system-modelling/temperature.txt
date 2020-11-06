@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Temperature of the Building named: Le Littre</h1>
+
+<p>There are 5 floors in the building.</p>
+<form action="/action_page.php" method="get">
+Floor Number: <input type="text" name="fname"><br>
+Sensor number: <input type="text" name="lname"><br>
+<button type="submit" value="Submit">Submit</button>
+<button type="reset" value="Reset">Reset</button>
+</form>
+
+</body>
+</html>
