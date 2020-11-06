@@ -1,0 +1,36 @@
+# dbpedia 
+PREFIX vrank:<http://purl.org/voc/vrank#>
+
+SELECT DISTINCT ?uni ?uniLabel ?pr WHERE {
+  ?uni wdt:P31/wdt:P279* wd:Q8065.
+  SERVICE <http://dbpedia.org/sparql> {
+    ?uni vrank:hasRank/vrank:rankValue ?pr
+  }
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
+  }
+} ORDER BY DESC(?pr) LIMIT 50
+
+
+#wikipedia
+SELECT ?country ?countryLabel ?article WHERE {
+
+    ?country wdt:P31/wdt:P279* wd:Q8065.
+    ?article schema:about ?country .
+    ?article schema:isPartOf <https://en.wikipedia.org/>.
+
+    SERVICE wikibase:label {
+       bd:serviceParam wikibase:language "en"
+    }
+}
+
+#wikidata
+#Map of places which got hit my natural disaster
+#added 2017-08
+#defaultView:Map
+SELECT 
+* WHERE {
+  ?item wdt:P31/wdt:P279* wd:Q8065;
+        wdt:P625 ?geo .
+}
+
