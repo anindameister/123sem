@@ -11,7 +11,7 @@
 
 ## References
 <a id="1">[1]</a> 
-https://github.com/anindameister/multiAgentProgramming
+https://github.com/anindameister/jacamo
 
 <a id="2">[2]</a> 
 https://github.com/anindameister/semanticWebClass
